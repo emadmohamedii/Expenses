@@ -41,15 +41,16 @@ A mock or real implementation can be swapped depending on the use case (e.g., un
 
 ## 🖼️ Screenshots
 
-| Dashboard | Add Expense | Receipt Upload |
-|----------|-------------|----------------|
-| ![App](screenshots/https://ibb.co/hRB8Q5G8) |
- ![App](screenshots/https://ibb.co/N2mjcZ5m) 
-| ![App](screenshots/https://ibb.co/WvQv6BKF)
-| ![App](screenshots/https://ibb.co/8ggwVQ2k)
-| ![App](screenshots/https://ibb.co/p6CJmTbH)
-| ![App](screenshots/https://ibb.co/gLtBdf1H)
-| ![App](screenshots/https://ibb.co/kg2SP7YK)
+| Dashboard |
+|----------|
+<img width="1170" height="2532" alt="7" src="https://github.com/user-attachments/assets/f67e8710-0e67-41ef-9615-4b1d6223ee7e" /> |
+<img width="1170" height="2532" alt="6" src="https://github.com/user-attachments/assets/c6f79343-bc60-411d-a050-24d14d094ff9" /> |
+<img width="1170" height="2532" alt="5" src="https://github.com/user-attachments/assets/dffabdbf-e564-4c13-91ec-ab9a06cb3659" /> |
+<img width="1170" height="2532" alt="4" src="https://github.com/user-attachments/assets/701d379d-51ec-4ab8-b369-5e367c6cf183" /> |
+<img width="1170" height="2532" alt="3" src="https://github.com/user-attachments/assets/17f441d3-83c8-4069-9b48-e983186e44bc" /> |
+<img width="1170" height="2532" alt="2" src="https://github.com/user-attachments/assets/2e25e224-98f6-4f77-b85b-faae59e3bf82" /> |
+<img width="1170" height="2532" alt="1" src="https://github.com/user-attachments/assets/8ee1100c-e6be-4528-bd5a-40719c15cd18" /> |
+|
 
 ---
 
