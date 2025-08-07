@@ -78,14 +78,29 @@ struct AmountInputView: View {
 
     // Filter logic: only allow valid numeric input up to 7 characters
     private func filterAmountInput(_ newValue: String) {
-        let filtered = newValue.filter { "0123456789.".contains($0) }
-        let components = filtered.split(separator: ".")
-        if components.count > 2 {
-            amount = String(components[0]) + "." + String(components[1])
-        } else {
-            amount = String(filtered.prefix(7))
+        // Remove invalid characters (allow only digits and one dot)
+        var filtered = newValue.filter { "0123456789.".contains($0) }
+        
+        // Ensure only one decimal point is present
+        let dotCount = filtered.filter { $0 == "." }.count
+        if dotCount > 1 {
+            // Keep only the first dot
+            if let firstDotIndex = filtered.firstIndex(of: ".") {
+                filtered = filtered.prefix(through: firstDotIndex) + filtered.dropFirst(firstDotIndex.utf16Offset(in: filtered)).replacingOccurrences(of: ".", with: "")
+            }
         }
+
+        // Limit to two decimal places
+        if let dotIndex = filtered.firstIndex(of: ".") {
+            let whole = filtered[..<dotIndex]
+            let fractional = filtered[filtered.index(after: dotIndex)...].prefix(2)
+            filtered = whole + "." + fractional
+        }
+
+        // Limit total length to 9 characters (e.g., "999999.99")
+        amount = String(filtered.prefix(9))
     }
+    
 }
 
 #Preview {

@@ -14,7 +14,6 @@ struct AddExpenseView: View {
     @StateObject var viewModel: AddExpenseViewModel
     @Environment(\.dismiss) var dismiss
     
-    @State private var amount: String = ""
     @State private var selectedCurrency: String = "USD"
     
     let currencies = ["USD", "EUR", "EGP", "GBP", "SAR"]
@@ -25,7 +24,7 @@ struct AddExpenseView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     categoryMenu
-                    AmountInputView(amount: $amount, selectedCurrency: $selectedCurrency)
+                    AmountInputView(amount: $viewModel.amount, selectedCurrency: $selectedCurrency)
                     datePickerButton
                     receiptButton
                     CategoriesGridView(selectedCategory: $viewModel.category)
